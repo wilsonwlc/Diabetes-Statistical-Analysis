@@ -38,11 +38,11 @@ To run this project, you will need the following R packages: `glm2`, `ggplot2`, 
 
 ## Data Preprocessing
 ### Feature Engineering
-1.	Created cvd (cardiovascular diseases) to combine high blood pressure, high cholesterol, stroke, coronary heart disease, and myocardial infarction.
-2.	Created healthy_diet, combining Fruits and Veggies, to indicate if a person has a healthy diet.
-3.	Only included PhysActivity. Excluded DiffWalk as difficulty walking could result from non-diabetes-related conditions.
-4.	Only included NoDocbcCost; excluded Education due to weaker association with diabetes.
-5.	To avoid recall bias, variables such as GenHlth were not selected.
+1.	Created `cvd` (cardiovascular diseases) to combine high blood pressure, high cholesterol, stroke, coronary heart disease, and myocardial infarction.
+2.	Created `healthy_diet`, combining `Fruits` and `Veggies`, to indicate if a person has a healthy diet.
+3.	Only included `PhysActivity`. Excluded `DiffWalk` as difficulty walking could result from non-diabetes-related conditions.
+4.	Only included `NoDocbcCost`; excluded `Education` due to weaker association with diabetes.
+5.	To avoid recall bias, variables such as `GenHlth` were not selected.
 
 ## Modeling Approach
 Two logistic regression models were fitted:
