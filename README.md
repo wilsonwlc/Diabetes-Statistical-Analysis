@@ -1,7 +1,7 @@
 # Logistic Regression - Risk Prediction for Diabetes
 
 ## Project Description
-To better understand the relationship between lifestyle factors and diabetes in the US. Using logistic regression, so the likelihood of diabetes (including pre-diabetes) based on healthcare statistics and lifestyle survey information is predicted
+To better understand the relationship between lifestyle factors and diabetes in the US, the likelihood of diabetes (including pre-diabetes) based on healthcare statistics and lifestyle survey information is predicted using logistic regression. 
 
 ## Dataset Information
 ### Target
@@ -33,31 +33,22 @@ To better understand the relationship between lifestyle factors and diabetes in 
 * **Dataset**: `diabetes_binary_5050split_health_indicators_BRFSS2015.csv`
 * **Analysis**: `main.ipynb` (Jupyter Notebook for analysis)
 
-## Installation and Requirements
-To run this project, you will need the following R packages: `glm2`, `ggplot2`, `forcats`, `dplyr`, `purrr`, `tidyr`, `caret`, `lmtest`, `pROC`, `MASS`
-
 ## Data Preprocessing
 ### Feature Engineering
-1.	Created `cvd` (cardiovascular diseases) to combine high blood pressure, high cholesterol, stroke, coronary heart disease, and myocardial infarction.
-2.	Created `healthy_diet`, combining `Fruits` and `Veggies`, to indicate if a person has a healthy diet.
-3.	Only included `PhysActivity`. Excluded `DiffWalk` as difficulty walking could result from non-diabetes-related conditions.
-4.	Only included `NoDocbcCost`; excluded `Education` due to weaker association with diabetes.
-5.	To avoid recall bias, variables such as `GenHlth` were not selected.
+1. Creat a new variable `cvd` representing the cardiovascular diseases including high blood pressure `HighBP`, high cholesterol `HighChol`, stroke `Stroke`, coronary heart disease (CHD), and myocardial infarction (MI) `HeartDiseaseorAttack`. 
+2. Perform logarithmic transformation and truncation on `BMI`
+3. To avoid recall bias, all of the perceived health i.e. `GenHlth`, `MentHlth`, `PhysHlth` are not selected. 
+4. Create a new variable `healthy_diet` which combines `Fruits` and `Veggies` and represents whether the person has a healthy diet
+5. Not select any variables related to financial difficulty `AnyHealthcare`, `NoDocbcCost` because `Income` already reflect the difficulty
+
 
 ## Modeling Approach
-Two logistic regression models were fitted:
+A logistic regression model was fitted with the following formula:
+`Diabetes_binary` ~ `CholCheck` + `BMI` + `Smoker` + `PhysActivity` + `HvyAlcoholConsump` + `DiffWalk` + `Sex` + `Age` + `Education` + `Income` + `cvd` + `healthy_diet`
 
-* Model 1 - a simple logistic regression model:
- `Diabetes_binary` ~ `cvd` + `Sex` + `Age` + `BMI` + `healthy_diet` + `PhysActivity` + `Smoker` + `HvyAlcoholConsump` + `NoDocbcCost`
-* Model 2 - an interaction model with interaction terms:
-`Diabetes_binary` ~ `cvd` + `Sex` + `Age` + `BMI` + `healthy_diet` + `PhysActivity` + `Smoker` + `HvyAlcoholConsump` + `NoDocbcCost` + `cvd:Sex` + `cvd:Age` + `cvd:BMI` + `cvd:healthy_diet` + `cvd:PhysActivity` + `cvd:Smoker` + `cvd:HvyAlcoholConsump` + `cvd:NoDocbcCost` + `Age:BMI` + `Age:PhysActivity` + `BMI:healthy_diet` + `BMI:PhysActivity`
-
-The models were selected based on interpretability, complexity, and AIC. Evaluation was done using accuracy and a confusion matrix.
+Backward selection using AIC was applied to simplify the models. Evaluation was done using a confusion matrix, AUC and accuracy.
 
 ## Results
-The following variables showed significant results in both models: `cvd`, `Sex`, `Age`, `BMI`, `healthy_diet`, `PhysActivity`, `Smoker`, `HvyAlcoholConsump`, and `NoDocbcCost`
-
-## Future Work
-* Improve the project with enhanced data visualization
-* Explore fitting a neural network model for improved prediction
+The following variables showed significant result: 
+`CholCheck`, `BMI`, `Smoker`, `PhysActivity`, `HvyAlcoholConsump`, `DiffWalk`, `Sex`, `Age over 30`, `Income over $20k`, `cvd`
 
