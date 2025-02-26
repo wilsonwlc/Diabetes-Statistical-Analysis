@@ -5,7 +5,7 @@ To better understand the relationship between lifestyle factors and diabetes in 
 
 ## Dataset Information
 ### Target
-* Diabetes_binary: 0 = no diabetes; 1 = pre-diabetes or diabetes
+* `Diabetes_binary`: 0 = no diabetes; 1 = pre-diabetes or diabetes
 ### Features
 1.	`HighBP`: 0 = no high blood pressure; 1 = high blood pressure
 2.	`HighChol`: 0 = no high cholesterol; 1 = high cholesterol
@@ -40,7 +40,6 @@ To better understand the relationship between lifestyle factors and diabetes in 
 3. To avoid recall bias, all of the perceived health i.e. `GenHlth`, `MentHlth`, `PhysHlth` are not selected. 
 4. Create a new variable `healthy_diet` which combines `Fruits` and `Veggies` and represents whether the person has a healthy diet
 5. Not select any variables related to financial difficulty `AnyHealthcare`, `NoDocbcCost` because `Income` already reflect the difficulty
-
 
 ## Modeling Approach
 A logistic regression model was fitted with the following formula:
