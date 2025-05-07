@@ -1,4 +1,4 @@
-# Diabetes and Lifestyle Factors: A Statistical Analysis
+# Diabetes and Lifestyle Factors - Statistical Analysis
 
 ## Project Description
 To better understand the relationship between lifestyle factors and diabetes in the US, the likelihood of diabetes (including pre-diabetes) based on healthcare statistics and lifestyle survey information is predicted using logistic regression. 
