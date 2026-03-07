@@ -31,7 +31,9 @@ To better understand the relationship between lifestyle factors and diabetes in 
 
 ## Project Structure
 * **Dataset**: `diabetes_binary_5050split_health_indicators_BRFSS2015.csv`
-* **Analysis**: `main.ipynb` (Jupyter Notebook for analysis)
+* **Analysis**: 
+    * `main.ipynb`: Contains the R code for the full statistical analysis
+    * `main.sas`: Contains the SAS code used for part of the analysis
 
 ## Data Preprocessing
 ### Feature Engineering
