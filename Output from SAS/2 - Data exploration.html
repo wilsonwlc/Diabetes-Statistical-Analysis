@@ -1,0 +1,3990 @@
+<!DOCTYPE html>
+<html class="ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: main.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c section > table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c section > pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c div > table,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c div > pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c article > table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c article > pre,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j section > table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j section > pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j div > table,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j div > pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j article > table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j article > pre,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c p.note, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c p.fatal,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j p.note, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j p.fatal,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.c > table.layoutcontainer, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l p.note,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.l p.fatal { margin-left: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c p.note,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r p.note,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r table, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r pre, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r p.note,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion.r p.fatal { margin-right: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba article, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba aside, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba details, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba figcaption, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba figure, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba footer, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba header, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba hgroup, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba nav, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba section { display: block }
+html.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba { font-size: 100% }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba ul, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba dd { margin: 0 0 0 40px }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba nav ul, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba img { border: 0; vertical-align: middle }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba svg:not(:root) { overflow: hidden }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba figure { margin: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba table { border-collapse: collapse; border-spacing: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p { margin-top: 0; text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h1.heading1 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h2.heading2 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h3.heading3 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h4.heading4 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h5.heading5 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba h6.heading6 { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba span { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba table { margin-bottom: 1em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba td, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba td[class$="fixed"], .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba th[class$="fixed"] { white-space: pre }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba section, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba article { padding-top: 1px; padding-bottom: 8px }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .stacked-value { text-align: left; display: block }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .stacked-cell > .stacked-value, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba td.data > td.data, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba th.data > td.data, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba th.data > th.data, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba td.data > th.data, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba th.header > th.header { border: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .stacked-cell > div.data { border-width: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > p { margin: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch { display: table }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .toc { display: none }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .proc_note_group, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .proc_title_group { margin-bottom: 1em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p.proctitle { margin: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p.note, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p.warning, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p.error, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba p.fatal { display: table }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notebanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warnbanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorbanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalbanner,
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notecontent, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warncontent, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorcontent, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notebanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warnbanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorbanner, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalbanner { padding-right: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body > div > ol li { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .c { text-align: center }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .r { text-align: right }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .l { text-align: left }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .j { text-align: justify }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .d { text-align: right }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .b { vertical-align: bottom }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .m { vertical-align: middle }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .t { vertical-align: top }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba a:active { color: #800080 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch { border: hidden; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > colgroup > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > colgroup, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > * > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer > tfoot { border: none; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .cell, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contentfolder, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contentproclabel, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .data, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph { border: hidden; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading1, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading2, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading3, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading4, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading5, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .indexaction, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutcontainer, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba a:link { color: #0000ff }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list3, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list4, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list5, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list6, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list7, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list8, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem3, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem4, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem5, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem6, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem7, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem8, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output { border: hidden; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pagesproclabel, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > colgroup > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > colgroup, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > * > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip > tfoot { border: none; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter10, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter2, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter3, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter4, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter5, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter6, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter7, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter8, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle10, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle2, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle3, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle4, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle5, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle6, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle7, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle8, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > colgroup > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > colgroup, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > * > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer > tfoot { border: none; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table { border: hidden; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > colgroup > col, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > colgroup, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > * > tr, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > thead, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > tbody, .ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer > tfoot { border: none; }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba a:visited { color: #800080 }
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_4b189f5d-a275-4d82-b32e-b705bba8a8ba .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_4b189f5d-a275-4d82-b32e-b705bba8a8ba" class="c body">
+<h1 class="body toc">Results: main.sas</h1>
+<section data-name="Contents" data-sec-type="proc">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Data exploration</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The CONTENTS Procedure</p>
+</div>
+<h1 class="contentprocname toc">The Contents Procedure</h1>
+<section>
+<h1 class="contentfolder toc">WORK.DF0</h1>
+<article aria-label="Attributes">
+<h1 class="contentitem toc">Attributes</h1>
+<table class="table" style="border-spacing: 0" aria-label="Attributes">
+<caption aria-label="Attributes"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set Name</th>
+<td class="data">WORK.DF0</td>
+<th class="rowheader" scope="row">Observations</th>
+<td class="data">70692</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Member Type</th>
+<td class="data">DATA</td>
+<th class="rowheader" scope="row">Variables</th>
+<td class="data">26</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Engine</th>
+<td class="data">V9</td>
+<th class="rowheader" scope="row">Indexes</th>
+<td class="data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Created</th>
+<td class="data">07/03/2026 23:18:44</td>
+<th class="rowheader" scope="row">Observation Length</th>
+<td class="data">280</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Last Modified</th>
+<td class="data">07/03/2026 23:18:44</td>
+<th class="rowheader" scope="row">Deleted Observations</th>
+<td class="data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Protection</th>
+<td class="data">&#160;</td>
+<th class="rowheader" scope="row">Compressed</th>
+<td class="data">NO</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Data Set Type</th>
+<td class="data">&#160;</td>
+<th class="rowheader" scope="row">Sorted</th>
+<td class="data">NO</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Label</th>
+<td class="data">&#160;</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Data Representation</th>
+<td class="data">SOLARIS_X86_64, LINUX_X86_64, ALPHA_TRU64, LINUX_IA64</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Encoding</th>
+<td class="data">utf-8  Unicode (UTF-8)</td>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX1" aria-label="Engine/Host Information">
+<h1 class="contentitem toc">Engine/Host Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Engine/Host Information">
+<caption aria-label="Engine/Host Information"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Engine/Host Dependent Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set Page Size</th>
+<td class="data">131072</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Data Set Pages</th>
+<td class="data">152</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">First Data Page</th>
+<td class="data">1</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Max Obs per Page</th>
+<td class="data">467</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Obs in First Data Page</th>
+<td class="data">449</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Data Set Repairs</th>
+<td class="data">0</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Filename</th>
+<td class="data">/saswork/SAS_work0A8C000122C4_odaws02-apse1.oda.sas.com/SAS_work2EE2000122C4_odaws02-apse1.oda.sas.com/df0.sas7bdat</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Release Created</th>
+<td class="data">9.0401M8</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Host Created</th>
+<td class="data">Linux</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Inode Number</th>
+<td class="data">2515665</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Access Permission</th>
+<td class="data">rw-r--r--</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Owner Name</th>
+<td class="data">u46099885</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">File Size</th>
+<td class="data">19MB</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">File Size (bytes)</th>
+<td class="data">20054016</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX2" aria-label="Varnum">
+<h1 class="contentitem toc">Varnum</h1>
+<table class="table" style="border-spacing: 0" aria-label="Varnum">
+<caption aria-label="Varnum"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="6" scope="colgroup">Variables in Creation Order</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">#</th>
+<th class="b header" scope="col">Variable</th>
+<th class="b header" scope="col">Type</th>
+<th class="r b header" scope="col">Len</th>
+<th class="b header" scope="col">Format</th>
+<th class="b header" scope="col">Informat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="data">Diabetes_binary</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="data">HighBP</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="data">HighChol</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="data">CholCheck</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="data">BMI</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="data">Smoker</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="data">Stroke</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="data">HeartDiseaseorAttack</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="data">PhysActivity</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="data">Fruits</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="data">Veggies</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="data">HvyAlcoholConsump</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<td class="data">AnyHealthcare</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<td class="data">NoDocbcCost</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<td class="data">genhlth_num</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<td class="data">MentHlth</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<td class="data">PhysHlth</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<td class="data">DiffWalk</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<td class="data">Sex</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<td class="data">age_num</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<td class="data">education_num</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">22</th>
+<td class="data">income_num</td>
+<td class="data">Num</td>
+<td class="r data">8</td>
+<td class="data">BEST12.</td>
+<td class="data">BEST32.</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">23</th>
+<td class="data">genhlth</td>
+<td class="data">Char</td>
+<td class="r data">13</td>
+<td class="data">&#160;</td>
+<td class="data">&#160;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">24</th>
+<td class="data">age</td>
+<td class="data">Char</td>
+<td class="r data">16</td>
+<td class="data">&#160;</td>
+<td class="data">&#160;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">25</th>
+<td class="data">education</td>
+<td class="data">Char</td>
+<td class="r data">46</td>
+<td class="data">&#160;</td>
+<td class="data">&#160;</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">26</th>
+<td class="data">income</td>
+<td class="data">Char</td>
+<td class="r data">24</td>
+<td class="data">&#160;</td>
+<td class="data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+<section data-name="Freq" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX3" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Data exploration</span> </p>
+<p><span class="c systemtitle2">Crosstab - Categorical variables</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The FREQ Procedure</p>
+</div>
+<h1 class="contentprocname toc">The Freq Procedure</h1>
+<section>
+<h1 class="contentfolder toc">Table AnyHealthcare * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;AnyHealthcare&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">AnyHealthcare</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1762</div>
+<div class="r t">55.34</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1422</div>
+<div class="r t">44.66</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3184</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33584</div>
+<div class="r t">49.75</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33924</div>
+<div class="r t">50.25</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">67508</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX4">
+<h1 class="contentfolder toc">Table CholCheck * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;CholCheck&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">CholCheck</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1508</div>
+<div class="r t">86.22</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">241</div>
+<div class="r t">13.78</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1749</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33838</div>
+<div class="r t">49.08</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35105</div>
+<div class="r t">50.92</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">68943</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX5">
+<h1 class="contentfolder toc">Table DiffWalk * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;DiffWalk&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">DiffWalk</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">30601</div>
+<div class="r t">57.93</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">22225</div>
+<div class="r t">42.07</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">52826</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4745</div>
+<div class="r t">26.56</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13121</div>
+<div class="r t">73.44</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">17866</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX6">
+<h1 class="contentfolder toc">Table Fruits * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;Fruits&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">Fruits</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">12790</div>
+<div class="r t">46.61</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">14653</div>
+<div class="r t">53.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">27443</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">22556</div>
+<div class="r t">52.15</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">20693</div>
+<div class="r t">47.85</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">43249</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX7">
+<h1 class="contentfolder toc">Table HeartDiseaseorAttack * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;HeartDiseaseorAttack&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">HeartDiseaseorAttack</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">32775</div>
+<div class="r t">54.40</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">27468</div>
+<div class="r t">45.60</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">60243</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2571</div>
+<div class="r t">24.61</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">7878</div>
+<div class="r t">75.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10449</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX8">
+<h1 class="contentfolder toc">Table HighBP * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;HighBP&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">HighBP</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">22118</div>
+<div class="r t">71.67</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8742</div>
+<div class="r t">28.33</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">30860</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13228</div>
+<div class="r t">33.21</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">26604</div>
+<div class="r t">66.79</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">39832</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX9">
+<h1 class="contentfolder toc">Table HighChol * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;HighChol&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">HighChol</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">21869</div>
+<div class="r t">65.22</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">11660</div>
+<div class="r t">34.78</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33529</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13477</div>
+<div class="r t">36.26</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">23686</div>
+<div class="r t">63.74</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">37163</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX10">
+<h1 class="contentfolder toc">Table HvyAlcoholConsump * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;HvyAlcoholConsump&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">HvyAlcoholConsump</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33158</div>
+<div class="r t">49.00</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">34514</div>
+<div class="r t">51.00</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">67672</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2188</div>
+<div class="r t">72.45</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">832</div>
+<div class="r t">27.55</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3020</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX11">
+<h1 class="contentfolder toc">Table NoDocbcCost * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;NoDocbcCost&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">NoDocbcCost</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">32449</div>
+<div class="r t">50.66</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">31604</div>
+<div class="r t">49.34</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">64053</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2897</div>
+<div class="r t">43.64</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3742</div>
+<div class="r t">56.36</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6639</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX12">
+<h1 class="contentfolder toc">Table PhysActivity * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;PhysActivity&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">PhysActivity</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">7934</div>
+<div class="r t">37.79</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13059</div>
+<div class="r t">62.21</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">20993</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">27412</div>
+<div class="r t">55.16</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">22287</div>
+<div class="r t">44.84</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">49699</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX13">
+<h1 class="contentfolder toc">Table Sex * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;Sex&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">Sex</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">19975</div>
+<div class="r t">52.04</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">18411</div>
+<div class="r t">47.96</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">38386</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">15371</div>
+<div class="r t">47.58</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">16935</div>
+<div class="r t">52.42</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">32306</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX14">
+<h1 class="contentfolder toc">Table Smoker * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;Smoker&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">Smoker</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">20065</div>
+<div class="r t">54.09</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">17029</div>
+<div class="r t">45.91</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">37094</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">15281</div>
+<div class="r t">45.48</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">18317</div>
+<div class="r t">54.52</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">33598</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX15">
+<h1 class="contentfolder toc">Table Stroke * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;Stroke&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">Stroke</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">34219</div>
+<div class="r t">51.61</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">32078</div>
+<div class="r t">48.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">66297</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1127</div>
+<div class="r t">25.64</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3268</div>
+<div class="r t">74.36</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4395</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX16">
+<h1 class="contentfolder toc">Table Veggies * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;Veggies&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">Veggies</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r t rowheader" scope="row">0</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6322</div>
+<div class="r t">42.34</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8610</div>
+<div class="r t">57.66</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">14932</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="r t rowheader" scope="row">1</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">29024</div>
+<div class="r t">52.05</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">26736</div>
+<div class="r t">47.95</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">55760</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX17">
+<h1 class="contentfolder toc">Table age * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;age&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">age</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="t rowheader" scope="row">(01) 18-24</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">901</div>
+<div class="r t">92.03</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">78</div>
+<div class="r t">7.97</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">979</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(02) 25-29</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1256</div>
+<div class="r t">89.97</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">140</div>
+<div class="r t">10.03</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1396</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(03) 30-34</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1735</div>
+<div class="r t">84.68</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">314</div>
+<div class="r t">15.32</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2049</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(04) 35-39</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2167</div>
+<div class="r t">77.59</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">626</div>
+<div class="r t">22.41</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2793</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(05) 40-44</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2469</div>
+<div class="r t">70.14</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1051</div>
+<div class="r t">29.86</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3520</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(06) 45-49</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2906</div>
+<div class="r t">62.52</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1742</div>
+<div class="r t">37.48</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4648</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(07) 50-54</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3784</div>
+<div class="r t">55.06</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3088</div>
+<div class="r t">44.94</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6872</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(08) 55-59</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4340</div>
+<div class="r t">50.45</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4263</div>
+<div class="r t">49.55</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8603</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(09) 60-64</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4379</div>
+<div class="r t">43.30</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5733</div>
+<div class="r t">56.70</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10112</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(10) 65-69</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4298</div>
+<div class="r t">39.59</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6558</div>
+<div class="r t">60.41</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10856</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(11) 70-74</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2903</div>
+<div class="r t">36.09</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5141</div>
+<div class="r t">63.91</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8044</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(12) 75-79</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1991</div>
+<div class="r t">36.91</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3403</div>
+<div class="r t">63.09</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5394</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(13) 80 or older</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2217</div>
+<div class="r t">40.86</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3209</div>
+<div class="r t">59.14</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5426</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX18">
+<h1 class="contentfolder toc">Table education * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;education&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">education</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="t rowheader" scope="row">(1) Never attended school or only kindergarten</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">28</div>
+<div class="r t">37.33</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">47</div>
+<div class="r t">62.67</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">75</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(2) Elementary</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">464</div>
+<div class="r t">28.17</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1183</div>
+<div class="r t">71.83</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1647</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(3) Some high school</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1151</div>
+<div class="r t">33.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2296</div>
+<div class="r t">66.61</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3447</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(4) High school graduate</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8407</div>
+<div class="r t">43.17</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">11066</div>
+<div class="r t">56.83</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">19473</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(5) Some college or technical school</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">9676</div>
+<div class="r t">48.31</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10354</div>
+<div class="r t">51.69</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">20030</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(6) College graduate</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">15620</div>
+<div class="r t">60.03</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10400</div>
+<div class="r t">39.97</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">26020</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX19">
+<h1 class="contentfolder toc">Table genhlth * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;genhlth&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">genhlth</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="t rowheader" scope="row">(1) Excellent</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">7142</div>
+<div class="r t">86.24</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1140</div>
+<div class="r t">13.76</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8282</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(2) Very Good</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13491</div>
+<div class="r t">67.89</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6381</div>
+<div class="r t">32.11</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">19872</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(3) Good</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">9970</div>
+<div class="r t">42.56</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13457</div>
+<div class="r t">57.44</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">23427</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(4) Fair</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3513</div>
+<div class="r t">26.41</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">9790</div>
+<div class="r t">73.59</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13303</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(5) Poor</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1230</div>
+<div class="r t">21.18</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4578</div>
+<div class="r t">78.82</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5808</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+<section id="IDX20">
+<h1 class="contentfolder toc">Table income * Diabetes_binary</h1>
+<article aria-label="Cross-Tabular Freq Table">
+<h1 class="contentitem toc">Cross-Tabular Freq Table</h1>
+<table role="presentation">
+<tr>
+<td class="c t"><table class="table" style="border-spacing: 0">
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<th class="t header" scope="col">
+<div class="stacked-cell">
+<div class="t">Frequency</div>
+<div class="t">Row Pct</div>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+<td><table class="table" style="border-spacing: 0" aria-label="Cross-Tabular Freq Table">
+<caption aria-label="Cross-Tabular Freq Table"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c header" colspan="4" scope="colgroup">Table&#160;of&#160;income&#160;by&#160;Diabetes_binary</th>
+</tr>
+<tr>
+<th class="c b header" rowspan="2" scope="col">income</th>
+<th class="c b header" colspan="3" scope="colgroup">Diabetes_binary</th>
+</tr>
+<tr>
+<th class="r header" scope="col">0</th>
+<th class="r header" scope="col">1</th>
+<th class="r header" scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="t rowheader" scope="row">(1) Less than $10k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1228</div>
+<div class="r t">34.01</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2383</div>
+<div class="r t">65.99</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3611</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(2) 10k to less than 15k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1412</div>
+<div class="r t">31.39</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3086</div>
+<div class="r t">68.61</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4498</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(3) 15k to less than 20k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">1989</div>
+<div class="r t">35.79</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3568</div>
+<div class="r t">64.21</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5557</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(4) 20k to less than 25k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">2604</div>
+<div class="r t">39.11</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4054</div>
+<div class="r t">60.89</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6658</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(5) 25k to less than 35k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">3506</div>
+<div class="r t">43.77</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4504</div>
+<div class="r t">56.23</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">8010</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(6) 35k to less than 50k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">4996</div>
+<div class="r t">48.57</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5291</div>
+<div class="r t">51.43</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">10287</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(7) 50k to less than 75k</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">6160</div>
+<div class="r t">53.92</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">5265</div>
+<div class="r t">46.08</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">11425</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">(8) $75k or more</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">13451</div>
+<div class="r t">65.15</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">7195</div>
+<div class="r t">34.85</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">20646</div>
+<div class="r t">&#160;</div>
+</div>
+</td>
+</tr>
+<tr>
+<th class="t rowheader" scope="row">Total</th>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">35346</div>
+</div>
+</td>
+<td class="r t data">
+<div class="stacked-cell">
+<div class="r t">70692</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</article>
+</section>
+</section>
+<section data-name="Means" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX21" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Data exploration</span> </p>
+<p><span class="c systemtitle2">Summary statistics - Continuous variables</span> </p>
+</div>
+<div class="proc_title_group">
+<p class="c proctitle">The MEANS Procedure</p>
+</div>
+<h1 class="contentprocname toc">The Means Procedure</h1>
+<article aria-label="Summary statistics">
+<h1 class="contentitem toc">Summary statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Summary statistics">
+<caption aria-label="Summary statistics"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="b header" scope="col">Variable</th>
+<th class="r b header" scope="col">Mean</th>
+<th class="r b header" scope="col">Std Dev</th>
+<th class="r b header" scope="col">Minimum</th>
+<th class="r b header" scope="col">25th Pctl</th>
+<th class="r b header" scope="col">Median</th>
+<th class="r b header" scope="col">75th Pctl</th>
+<th class="r b header" scope="col">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="data">
+<div class="stacked-cell">
+<div>BMI</div>
+<div>MentHlth</div>
+<div>PhysHlth</div>
+</div>
+</th>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">29.8569852</div>
+<div class="r">3.7520370</div>
+<div class="r">5.8104170</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">7.1139539</div>
+<div class="r">8.1556266</div>
+<div class="r">10.0622605</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">12.0000000</div>
+<div class="r">0</div>
+<div class="r">0</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">25.0000000</div>
+<div class="r">0</div>
+<div class="r">0</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">29.0000000</div>
+<div class="r">0</div>
+<div class="r">0</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">33.0000000</div>
+<div class="r">2.0000000</div>
+<div class="r">6.0000000</div>
+</div>
+</td>
+<td class="r data">
+<div class="stacked-cell">
+<div class="r">98.0000000</div>
+<div class="r">30.0000000</div>
+<div class="r">30.0000000</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</div>
+</body>
+</html>
