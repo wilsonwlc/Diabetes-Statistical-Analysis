@@ -30,7 +30,7 @@ To better understand the relationship between lifestyle factors and diabetes in 
 21.	`Income`: Income level (1-8, from <$10,000 to $75,000+)
 
 ## Project Structure
-* **Dataset**: `diabetes_binary_5050split_health_indicators_BRFSS2015.csv`
+* **Dataset**: `data/diabetes_binary_5050split_health_indicators_BRFSS2015.csv`
 * **Analysis**: 
     * `main.ipynb`: Contains the R code for the full statistical analysis
     * `main.sas`: Contains the SAS code used for part of the analysis
